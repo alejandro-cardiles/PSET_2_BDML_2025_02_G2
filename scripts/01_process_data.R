@@ -11,13 +11,10 @@ pacman::p_load(rio, rvest, tidyverse,janitor, data.table)
 #=====================#
 #  1. Import 
 #=====================#
-list_f <- list.files("01_process_data/1_input/",
+list_f <- list.files("stores/processed/",
                      pattern = ".csv", 
                      full.names = TRUE, 
                      ignore.case = TRUE)
-
-# skip sample_submission.csv
-list_f <- list_f[!grepl("sample_submission.csv", list_f)]
 
 # names
 file_names <- tools::file_path_sans_ext(basename(list_f))
@@ -277,19 +274,19 @@ clean_people <- function(df) {
 train_personas <- clean_housing(train_hogares)
 test_personas <- clean_housing(test_hogares)
 
-export(train_personas,"01_process_data/3_output/train_hogares.rds")
-export(test_personas,"01_process_data/3_output/test_hogares.rds")
+export(train_personas,"stores/processed/train_hogares.rds")
+export(test_personas,"stores/processed/test_hogares.rds")
 
 train_personas <- clean_people(train_personas)
 test_personas <- clean_people(test_personas)
 
-export(train_personas,"01_process_data/3_output/train_personas.rds")
-export(test_personas,"01_process_data/3_output/test_personas.rds")
+export(train_personas,"stores/processed/train_personas.rds")
+export(test_personas,"stores/processed/test_personas.rds")
 
 
 common_cols <- intersect(names(train_personas), names(test_personas))
 
-export(common_cols, "01_process_data/3_output/common_cols.rds")
+export(common_cols, "stores/processed/common_cols.rds")
 
 
 
