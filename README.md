@@ -1,18 +1,47 @@
-# Problem Set Template Repository for Big Data and Machine Learning for Applied Economics
+# Predicción de Pobreza en Colombia (2018)
 
-This is the template repository for the problem sets.
-
-The repo should contain at least four folders:
-
-- `document`: contains your final document in `pdf` format. Ideally, the document should pull figures and tables directly from the `views` folder. I've included a latex template I created for the Thesis Seminar. 
-- `scripts`: contains all your scripts
-- `stores`: contains all the data sets used. If files are "too big" for GitHub, include a document describing where people can access the data.
-- `views`: contains all figures and tables
+Este proyecto tiene como objetivo predecir la condición de pobreza de los hogares en Colombia para el año 2018, a partir de información de hogares y personas.El flujo de trabajo se organiza en etapas de limpieza, modelado y predicción, cada una representada por diferentes carpetas y convenciones de nombres.
+Contiene los scripts principales de procesamiento y análisis.
 
 
+<!---------------------------------------------------------------------->
+<!---------------------------------------------------------------------->
+<!---------------------------------------------------------------------->
+## document
 
-## Some general reminders: 
 
-- It is essential how you write up the document. Be sure to be organized and consistent in explaining your equations and findings. Make sure that there are no compilation errors.
-- Write understandable code, separating and commenting on each section. Coding, like in writing, style is critical for readability. If the code is well written, it should be self-contained. There is no need to write everything you did. I encourage you to follow the [tidyverse style guide](https://style.tidyverse.org/)
+<!---------------------------------------------------------------------->
+<!---------------------------------------------------------------------->
+<!---------------------------------------------------------------------->
+## scripts
+Los scripts que comienzan con “A” corresponden a la limpieza general de los datos, mientras que los scripts que comienzan con “B” corresponden a la modelación y "C" a predicción. 
 
+* A01_hogar.R
+
+* A02_persona.R
+
+<!---------------------------------------------------------------------->
+<!---------------------------------------------------------------------->
+<!---------------------------------------------------------------------->
+## stores
+Directorio que almacena los resultados intermedios, modelos y predicciones generadas durante el flujo de trabajo.
+
+<!--------------------------->
+### A_procesamiento
+
+Archivos generados durante la fase de limpieza y preparación de datos:
+
+<!--------------------------->
+### B_modelos/
+
+Contendrá los resultados y objetos generados por los modelos de predicción.
+
+<!--------------------------->
+### C_predicciones
+
+Directorio destinado a los resultados de predicciones finales.
+
+<!---------------------------------------------------------------------->
+<!---------------------------------------------------------------------->
+<!---------------------------------------------------------------------->
+### views
